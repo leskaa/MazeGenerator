@@ -30,6 +30,15 @@ class Cell{
             rc.line(this.x, this.y + this.h, this.x, this.y);
         }
     }
+    
+    removeEdge(num){
+        switch(num){
+            case 1: this.top = false; break;
+            case 2: this.right = false; break;
+            case 3: this.bottom = false; break;
+            case 4: this. left = false; break;
+        }
+    }
 }
 
 let cells = [];
@@ -40,7 +49,8 @@ for(let x = 10; x < 800; x+=80){//change the 800 for a variable so the size coul
     }
 }
 
-//I read that .forEach is 95% slower than a regular for loop so I went with this
 for(let i = 0; i < cells.length; i++){
+    cells[i].removeEdge(1);//To test removing top edges
+    cells[i].removeEdge(3);//To test removing bottom edges
     cells[i].display();
 }
