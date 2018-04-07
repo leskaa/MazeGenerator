@@ -1,7 +1,8 @@
 "use strict"
 const rc = rough.canvas(document.getElementById('canvas'));
+var ctx = canvas.getContext("2d");//for displaying text
 
-class Cell{
+class Cell {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -14,19 +15,19 @@ class Cell{
     }
 
     display(){
-        if(this.top){
+        if(this.top) {
             rc.line(this.x, this.y, this.x + this.w, this.y);
         }
 
-        if(this.right){
+        if(this.right) {
             rc.line(this.x + this.w, this.y, this.x + this.w, this.y + this.h);
         }
 
-        if(this.bottom){
+        if(this.bottom) {
             rc.line(this.x + this.w, this.y + this.h, this.x, this.y + this.h);
         }
 
-        if(this.left){
+        if(this.left) {
             rc.line(this.x, this.y + this.h, this.x, this.y);
         }
     }
@@ -43,10 +44,15 @@ class Cell{
 
 let cells = [];
 //let cells = [...Array(10)].map(e => Array(10).fill(0));
-for(let x = 10; x < 800; x+=80) {//change the 800 for a variable so the size could possibly be changed within program
-    for(let y = 10; y < 800; y+=80) {
+for(let y = 10; y < 800; y+=80) {//change the 800 for a variable so the size could possibly be changed within program
+    for(let x = 10; x < 800; x+=80) {
         cells.push(new Cell(x, y));
     }
+}
+
+//For displaying numbers above the cells for development reference(remove later)
+for(let i = 40; i < 800; i+=80) {
+    ctx.fillText(Math.round(i/80),i,7);
 }
 
 for(let i = 0; i < cells.length; i++) {
