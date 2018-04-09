@@ -1,3 +1,4 @@
+'use strict';
 const rc = rough.canvas(document.getElementById("canvas"));
 let ctx = canvas.getContext("2d"); //for displaying text
 
