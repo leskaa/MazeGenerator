@@ -16,7 +16,19 @@ class Cell {
   }
 
   display() {
-    console.log(index(this.x, this.y));
+    //console.log(index(this.x, this.y));
+    if(this.top == true) {
+      rc.line(this.x*this.w, this.y*this.height, this.x*this.w+this.w, this.y*this.h);
+    }
+    if(this.right == true) {
+      rc.line(this.x*this.w+this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h+this.h);
+    }
+    if(this.bottom == true) {
+      rc.line(this.x*this.w, this.y*this.h+this.h, this.x*this.w+this.w, this.y*this.h+this.h);
+    }
+    if(this.left == true) {
+      rc.line(this.x*this.w, this.y*this.h, this.x*this.w, this.y*this.h+this.h);
+    }
   }
 
   removeEdge(num) {
