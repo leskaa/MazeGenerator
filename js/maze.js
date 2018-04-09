@@ -1,27 +1,21 @@
 class Maze {
-  constructor() {
-    this.settings = {
-      cols: 10,
-      rows: 10,
-      width: 800,
-      height: 800
-    };
-
+  constructor(cols, rows, w, h) {
+    this.cols = cols;
+    this.rows = rows;
+    this.w = w;
+    this.h = h;
     this.cells = [];
-    fillCells();
+    for (let y = 0; y < this.cols; y++) {
+      for (let x = 0; x < this.rows; x++) {
+        this.cells.push(new Cell(this.x, this.y, this.w/this.cols, this.h/this.rows));
+      }
+    }
   }
 
   display() {
-    cells.forEach(function(element) {
+    this.cells.forEach(function(element) {
       element.display();
+      console.log("test");
     });
-  }
-
-  fillCells(){
-    for (let y = 0; y < 10; y++) {
-      for (let x = 0; x < 10; x++) {
-        cells.push(new Cell(x, y));
-      }
-    }
   }
 }

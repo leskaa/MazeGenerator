@@ -1,9 +1,9 @@
 class Cell {
-  constructor(x, y) {
+  constructor(x, y ,w ,h) {
     this.x = x; //rework how the variables here related to the maze settings
     this.y = y;
-    this.w = 80;
-    this.h = 80;
+    this.w = w;
+    this.h = h;
 
     this.top = true;
     this.right = true;
@@ -18,16 +18,8 @@ class Cell {
   display() {
     //console.log(index(this.x, this.y));
     if(this.top == true) {
-      rc.line(this.x*this.w, this.y*this.height, this.x*this.w+this.w, this.y*this.h);
-    }
-    if(this.right == true) {
-      rc.line(this.x*this.w+this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h+this.h);
-    }
-    if(this.bottom == true) {
-      rc.line(this.x*this.w, this.y*this.h+this.h, this.x*this.w+this.w, this.y*this.h+this.h);
-    }
-    if(this.left == true) {
-      rc.line(this.x*this.w, this.y*this.h, this.x*this.w, this.y*this.h+this.h);
+      rc.line(this.x*this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h);
+      console.log("thattest");
     }
   }
 
