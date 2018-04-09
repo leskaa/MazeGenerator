@@ -7,7 +7,7 @@ class Maze {
     this.cells = [];
     for (let y = 0; y < this.cols; y++) {
       for (let x = 0; x < this.rows; x++) {
-        this.cells.push(new Cell(this.x, this.y, this.w/this.cols, this.h/this.rows));
+        this.cells.push(new Cell(x, y, this.w/this.cols, this.h/this.rows));
       }
     }
   }
@@ -15,7 +15,6 @@ class Maze {
   display() {
     this.cells.forEach(function(element) {
       element.display();
-      console.log("test");
     });
   }
 }
