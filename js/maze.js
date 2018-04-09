@@ -6,14 +6,22 @@ class Maze {
       width: 800,
       height: 800
     };
+
+    this.cells = [];
+    fillCells();
   }
 
   display() {
-    //moved from main.js
-    for (let i = 0; i < cells.length; i++) {
-      //cells[i].removeEdge(1);//To test removing top edges
-      //cells[i].removeEdge(3);//To test removing bottom edges
-      cells[i].display();
+    cells.forEach(function(element) {
+      element.display();
+    });
+  }
+
+  fillCells(){
+    for (let y = 0; y < 10; y++) {
+      for (let x = 0; x < 10; x++) {
+        cells.push(new Cell(x, y));
+      }
     }
   }
 }
