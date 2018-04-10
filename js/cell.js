@@ -50,30 +50,32 @@ class Cell {
   getRandomNeighbor(){
     let neighbors = [];
 
-    let top = cells[index(this.x, this.y++)];
-    let right = cells[index(this.x++, this.y)];
-    let bottom = cells[index(this.x, this.y--)];
-    let left = cells[index(this.x--, this.y)];
+    let top = cells[index(this.x, this.y-1)];
+    let right = cells[index(this.x+1, this.y)];
+    let bottom = cells[index(this.x, this.y+1)];
+    let left = cells[index(this.x-1, this.y)];
 
-    if(top.visited == false && this.y > 0){
+    console.log(top + " " + right + " " + bottom + " " + left);
+
+    if(top!=undefined && top.visited == false){
       neighbors.push(top);
     }
-    console.log("x: " + this.x + "  y: " + this.y + "  bottomx: " + bottom.x + "  bottomy: " + bottom.y);
 
-    if(right.visited == false && this.x < settings.cols){
+    if(right!=undefined && right.visited == false){
       neighbors.push(right);
     }
-    if(bottom.visited == false && this.y < settings.rows){
+
+    if(bottom!=undefined && bottom.visited == false){
       neighbors.push(bottom);
     }
 
-    if(left.visited == false && this.x > 0){
+    if(left!=undefined && left.visited == false){
       neighbors.push(left);
     }
 
-    console.log(neighbors);
+    let n = Math.floor(Math.random() * neighbors.length) + 1;
 
-    let n = Math.floor(Math.random() * 4) + 1;
+    return neighbors;
   }
 }
 
