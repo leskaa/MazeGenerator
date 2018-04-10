@@ -1,3 +1,10 @@
+cells = [];
+
+settings = {
+  cols: 10,
+  rows: 10
+};
+
 class Cell {
   constructor(x, y ,w ,h) {
     this.x = x;
@@ -11,8 +18,6 @@ class Cell {
     this.left = true;
 
     this.visited = false;
-
-    this.neighbors = [];
   }
 
   display() {
@@ -38,9 +43,16 @@ class Cell {
         case 4: this.left = false; break;
     }
   }
+
+  getRandomNeighbor(){
+    console.log(cells[index(this.x, this.y)]);
+
+    let n = Math.floor(Math.random() * 4) + 1;
+    console.log(n);
+  }
 }
 
 //gets the array index of a cell from its row/col number
 function index(x, y) {
-  return x + y * numOfCols;
+  return x + y * settings.cols;
 }
