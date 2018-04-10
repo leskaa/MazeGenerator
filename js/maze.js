@@ -2,8 +2,8 @@ class Maze {
   constructor(config) {
     this.cols = config.cols;
     this.rows = config.rows;
-    this.w = config.w;
-    this.h = config.h;
+    this.w = config.width;
+    this.h = config.height;
 
     this.fillCells();
 

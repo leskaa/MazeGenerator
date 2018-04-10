@@ -48,17 +48,31 @@ class Cell {
   }
 
   getRandomNeighbor(){
-    console.log(cells[index(this.x, this.y)]);
+    let neighbors = [];
+
+    let top = cells[index(this.x, this.y++)];
+    let right = cells[index(this.x++, this.y)];
+    let bottom = cells[index(this.x, this.y--)];
+    let left = cells[index(this.x--, this.y)];
+
+    if(top.visited == false && this.y > 1){
+      neighbors.push(top);
+      console.log("test");
+    }
+    if(right.visited == false && this.x < settings.cols){
+      neighbors.push(right);
+    }
+    if(bottom.visited == false && this.y < settings.rows){
+      neighbors.push(bottom);
+    }
+
+    if(left.visited == false && this.x > 1){
+      neighbors.push(left);
+    }
 
     let n = Math.floor(Math.random() * 4) + 1;
-    console.log(n);
-
-    switch(n){
-      case 1: break;
-      case 2: break;
-      case 3: break;
-      case 4: break;
-    }
+    console.log(neighbors);
+    return neighbors[n];
   }
 }
 
