@@ -14,7 +14,7 @@ class Cell {
   }
 
   display() {
-    if(this.top == true) {
+    if(this.top) {
       rc.line(this.x*this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h);
         } 
     if(this.right == true) {
@@ -28,8 +28,8 @@ class Cell {
         }
   }
 
-  removeEdge(num) {
-    switch (num) {
+  removeEdge(side) {
+    switch (side) {
         case 1: this.top = false; break;
         case 2: this.right = false; break;
         case 3: this.bottom = false; break;

@@ -19,7 +19,7 @@ class Maze {
   depthSearch(){
     let stack = [];
     let current = cells[0];
-    let next;
+    let next =  current.getRandomNeighbor();
     current.visited = true;
 
     while(current.getRandomNeighbor()){
@@ -27,29 +27,30 @@ class Maze {
       stack.push(current);
 
       if(next.x > current.x){//next is to the right
-        current.removeEdge();
-        current.removeEdge();
+        current.removeEdge(2);
+        next.removeEdge(4);
       }
 
       if(next.x < current.x){//next is to the left
-        current.removeEdge();
-        current.removeEdge();
+        current.removeEdge(4);
+        next.removeEdge(2);
       }
 
       if(next.y > current.y){//next is on the bottom
-        current.removeEdge();
-        current.removeEdge();
+        current.removeEdge(3);
+        next.removeEdge(1);
       }
 
       if(next.y < current.y){//next is on top of current
-        current.removeEdge();
-        current.removeEdge();
+        current.removeEdge(1);
+        next.removeEdge(3);
       }
-    }
-  }
 
-  backtrack(){
-    
+      current = next;
+      current.visited = true;
+    }
+
+    console.log(stack);
   }
 
   keepChecking(){
