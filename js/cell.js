@@ -45,19 +45,19 @@ class Cell {
     let bottom = cells[index(this.x, this.y+1)];
     let left = cells[index(this.x-1, this.y)];
 
-    if(top!=undefined && top.visited == false){
+    if(top!=undefined && top.visited == false && this.y > 1){
       neighbors.push(top);
     }
 
-    if(right!=undefined && right.visited == false){
+    if(right!=undefined && right.visited == false && this.x < settings.cols){
       neighbors.push(right);
     }
 
-    if(bottom!=undefined && bottom.visited == false){
+    if(bottom!=undefined && bottom.visited == false && this.y < settings.rows){
       neighbors.push(bottom);
     }
 
-    if(left!=undefined && left.visited == false){
+    if(left!=undefined && left.visited == false && this.x > 1){
       neighbors.push(left);
     }
 
