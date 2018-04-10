@@ -22,11 +22,7 @@ class Maze {
     let next =  current.getRandomNeighbor();
     current.visited = true;
 
-    while(this.keepChecking()){
-      
-      if(this.keepChecking() == -1){
-        break;
-      }
+    for(let i = 0; i < 70; i++){
 
       if(current.getRandomNeighbor()){
       next = current.getRandomNeighbor();
