@@ -15,16 +15,16 @@ class Cell {
 
   display() {
     if(this.top) {
-      rc.line(this.x*this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h);
+      rc.line(this.x*this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h,{roughness: 0});
         } 
     if(this.right == true) {
-      rc.line(this.x*this.w+this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h+this.h);
+      rc.line(this.x*this.w+this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h+this.h,{roughness: 0});
         }
     if(this.bottom == true) {
-      rc.line(this.x*this.w, this.y*this.h+this.h, this.x*this.w+this.w, this.y*this.h+this.h);
+      rc.line(this.x*this.w, this.y*this.h+this.h, this.x*this.w+this.w, this.y*this.h+this.h,{roughness: 0});
         }
     if(this.left == true) {
-      rc.line(this.x*this.w, this.y*this.h, this.x*this.w, this.y*this.h+this.h);
+      rc.line(this.x*this.w, this.y*this.h, this.x*this.w, this.y*this.h+this.h,{roughness: 0});
         }
   }
 
@@ -45,7 +45,7 @@ class Cell {
     let bottom = cells[index(this.x, this.y+1)];
     let left = cells[index(this.x-1, this.y)];
 
-    if(top!=undefined && top.visited == false && this.y > 1){
+    if(top!=undefined && top.visited == false && this.y > 0){
       neighbors.push(top);
     }
 
@@ -57,7 +57,7 @@ class Cell {
       neighbors.push(bottom);
     }
 
-    if(left!=undefined && left.visited == false && this.x > 1){
+    if(left!=undefined && left.visited == false && this.x > 0){
       neighbors.push(left);
     }
 

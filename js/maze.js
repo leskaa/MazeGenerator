@@ -5,70 +5,61 @@ class Maze {
     this.w = config.width;
     this.h = config.height;
 
+    this.stack = [];
+
     this.fillCells();
+
+    this.current = cells[0];
   }
 
-  fillCells(){
+  fillCells() {
     for (let y = 0; y < this.cols; y++) {
       for (let x = 0; x < this.rows; x++) {
-        cells.push(new Cell(x, y, this.w/this.cols, this.h/this.rows));
+        cells.push(new Cell(x, y, this.w / this.cols, this.h / this.rows));
       }
     }
   }
 
-  depthSearch(){
-    let stack = [];
-    let current = cells[0];
-    let next =  current.getRandomNeighbor();
-    current.visited = true;
+  depthSearch() {
 
-    for(let i = 0; i < 70; i++){
+    this.current.visited = true;
+    this.next = this.current.getRandomNeighbor();
 
-      if(current.getRandomNeighbor()){
-      next = current.getRandomNeighbor();
-      stack.push(current);
+      if (this.next != null) {
 
-      if(next.x > current.x){//next is to the right
-        current.removeEdge(2);
-        next.removeEdge(4);
-      }
+        this.stack.push(this.current);
 
-      if(next.x < current.x){//next is to the left
-        current.removeEdge(4);
-        next.removeEdge(2);
-      }
+        if (this.next.x > this.current.x) {
+          //next is to the right
+          this.current.removeEdge(2);
+          this.next.removeEdge(4);
+        }
 
-      if(next.y > current.y){//next is on the bottom
-        current.removeEdge(3);
-        next.removeEdge(1);
-      }
+        if (this.next.x < this.current.x) {
+          //next is to the left
+          this.current.removeEdge(4);
+          this.next.removeEdge(2);
+        }
 
-      if(next.y < current.y){//next is on top of current
-        current.removeEdge(1);
-        next.removeEdge(3);
-      }
+        if (this.next.y > this.current.y) {
+          //next is on the bottom
+          this.current.removeEdge(3);
+          this.next.removeEdge(1);
+        }
 
-      current = next;
-      current.visited = true;
-    }else if(stack.length > 0){
-        current = stack.pop();
-  }
-}
-  }
+        if (this.next.y < this.current.y) {
+          //next is on top of current
+          this.current.removeEdge(1);
+          this.next.removeEdge(3);
+        }
 
-  keepChecking(){
-    let count = 0;
-    for(let i = 0; i < cells.length; i++){
-      if(cells[i].visited){
-        count++;
+        this.current = this.next;
+        this.current.visited = true;
+
+      } else if (this.stack.length > 0) {
+        this.current = this.stack.pop();
       }
     }
-    if(count == cells.length){
-      return -1;
-    }else{
-      return true;
-    }
-  }
 
   display() {
     cells.forEach(function(element) {
