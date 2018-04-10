@@ -1,13 +1,3 @@
-//GLOBAL VARIABLES
-cells = [];
-
-settings = {
-  cols: 3,
-  rows: 3,
-  width: 500,
-  height: 500
-};
-
 class Cell {
   constructor(x, y ,w ,h) {
     this.x = x;
@@ -47,15 +37,13 @@ class Cell {
     }
   }
 
-  getRandomNeighbor(){
+  getRandomNeighbor(){//returns a random neighbor cell
     let neighbors = [];
 
     let top = cells[index(this.x, this.y-1)];
     let right = cells[index(this.x+1, this.y)];
     let bottom = cells[index(this.x, this.y+1)];
     let left = cells[index(this.x-1, this.y)];
-
-    console.log(top + " " + right + " " + bottom + " " + left);
 
     if(top!=undefined && top.visited == false){
       neighbors.push(top);
@@ -73,9 +61,9 @@ class Cell {
       neighbors.push(left);
     }
 
-    let n = Math.floor(Math.random() * neighbors.length) + 1;
+    let n = Math.floor(Math.random() * neighbors.length-1) + 1;
 
-    return neighbors;
+    return neighbors[n];
   }
 }
 

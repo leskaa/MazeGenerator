@@ -6,10 +6,6 @@ class Maze {
     this.h = config.height;
 
     this.fillCells();
-
-    this.current;
-    this.next;
-    this.stack = [];
   }
 
   fillCells(){
@@ -21,11 +17,49 @@ class Maze {
   }
 
   depthSearch(){
-    this.current = cells[0];
+    let stack = [];
+    let current = cells[0];
+    let next;
+    current.visited = true;
+
+    while(current.getRandomNeighbor()){
+      next = current.getRandomNeighbor();
+      stack.push(current);
+
+      if(next.x > current.x){//next is to the right
+        current.removeEdge();
+        current.removeEdge();
+      }
+
+      if(next.x < current.x){//next is to the left
+        current.removeEdge();
+        current.removeEdge();
+      }
+
+      if(next.y > current.y){//next is on the bottom
+        current.removeEdge();
+        current.removeEdge();
+      }
+
+      if(next.y < current.y){//next is on top of current
+        current.removeEdge();
+        current.removeEdge();
+      }
+    }
   }
 
   backtrack(){
     
+  }
+
+  keepChecking(){
+    let count = 0;
+    for(let i = 0; i < cells.length; i++){
+      if(cells[i].visited){
+        count++;
+      }
+    }
+    return count != cells.length;
   }
 
   display() {
