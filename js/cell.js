@@ -2,8 +2,8 @@
 cells = [];
 
 settings = {
-  cols: 10,
-  rows: 10,
+  cols: 3,
+  rows: 3,
   width: 500,
   height: 500
 };
@@ -55,10 +55,11 @@ class Cell {
     let bottom = cells[index(this.x, this.y--)];
     let left = cells[index(this.x--, this.y)];
 
-    if(top.visited == false && this.y > 1){
+    if(top.visited == false && this.y > 0){
       neighbors.push(top);
-      console.log("test");
     }
+    console.log("x: " + this.x + "  y: " + this.y + "  bottomx: " + bottom.x + "  bottomy: " + bottom.y);
+
     if(right.visited == false && this.x < settings.cols){
       neighbors.push(right);
     }
@@ -66,13 +67,13 @@ class Cell {
       neighbors.push(bottom);
     }
 
-    if(left.visited == false && this.x > 1){
+    if(left.visited == false && this.x > 0){
       neighbors.push(left);
     }
 
-    let n = Math.floor(Math.random() * 4) + 1;
     console.log(neighbors);
-    return neighbors[n];
+
+    let n = Math.floor(Math.random() * 4) + 1;
   }
 }
 
