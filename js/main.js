@@ -4,8 +4,8 @@ const rc = rough.canvas(document.getElementById("canvas"));
 cells = [];
 
 settings = {
-  cols: 20,
-  rows: 20,
+  cols: 10,
+  rows: 10,
   width: 500,
   height: 500
 };

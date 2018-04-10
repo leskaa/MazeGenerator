@@ -22,7 +22,13 @@ class Maze {
     let next =  current.getRandomNeighbor();
     current.visited = true;
 
-    while(current.getRandomNeighbor()){
+    while(this.keepChecking()){
+      
+      if(this.keepChecking() == -1){
+        break;
+      }
+
+      if(current.getRandomNeighbor()){
       next = current.getRandomNeighbor();
       stack.push(current);
 
@@ -48,9 +54,10 @@ class Maze {
 
       current = next;
       current.visited = true;
-    }
-
-    console.log(stack);
+    }else if(stack.length > 0){
+        current = stack.pop();
+  }
+}
   }
 
   keepChecking(){
@@ -60,7 +67,11 @@ class Maze {
         count++;
       }
     }
-    return count != cells.length;
+    if(count == cells.length){
+      return -1;
+    }else{
+      return true;
+    }
   }
 
   display() {
