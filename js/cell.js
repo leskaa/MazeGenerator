@@ -1,8 +1,11 @@
+//GLOBAL VARIABLES
 cells = [];
 
 settings = {
   cols: 10,
-  rows: 10
+  rows: 10,
+  width: 500,
+  height: 500
 };
 
 class Cell {
@@ -49,6 +52,13 @@ class Cell {
 
     let n = Math.floor(Math.random() * 4) + 1;
     console.log(n);
+
+    switch(n){
+      case 1: break;
+      case 2: break;
+      case 3: break;
+      case 4: break;
+    }
   }
 }
 

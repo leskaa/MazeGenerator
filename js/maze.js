@@ -1,9 +1,9 @@
 class Maze {
-  constructor(cols, rows, w, h) {
-    this.cols = settings.cols;
-    this.rows = settings.rows;
-    this.w = w;
-    this.h = h;
+  constructor(config) {
+    this.cols = config.cols;
+    this.rows = config.rows;
+    this.w = config.w;
+    this.h = config.h;
 
     this.fillCells();
 
