@@ -28,10 +28,10 @@ B2FFA8
 Cool form inputs to manipulate the maze:
 
 
-<form>
+"<form>
   
   Select your favorite color:
   
   <input type="color" name="favcolor">
   
-</form>
+</form>"
