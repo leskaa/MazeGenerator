@@ -1,5 +1,5 @@
 class Cell {
-  constructor(x, y ,w ,h) {
+  constructor(x, y, w, h) {
     this.x = x;
     this.y = y;
     this.w = w;
@@ -15,54 +15,70 @@ class Cell {
   }
 
   display() {
-    if(this.top) {
-      rc.line(this.x*this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h,{roughness: 0});
-        } 
-    if(this.right == true) {
-      rc.line(this.x*this.w+this.w, this.y*this.h, this.x*this.w+this.w, this.y*this.h+this.h,{roughness: 0});
-        }
-    if(this.bottom == true) {
-      rc.line(this.x*this.w, this.y*this.h+this.h, this.x*this.w+this.w, this.y*this.h+this.h,{roughness: 0});
-        }
-    if(this.left == true) {
-      rc.line(this.x*this.w, this.y*this.h, this.x*this.w, this.y*this.h+this.h,{roughness: 0});
-        }
+    if (this.top) {
+      rc.line(this.x * this.w, this.y * this.h, this.x * this.w + this.w, this.y * this.h, {
+        roughness: 0
+      });
+    }
+    if (this.right) {
+      rc.line(this.x * this.w + this.w, this.y * this.h, this.x * this.w + this.w, this.y * this.h + this.h, {
+        roughness: 0
+      });
+    }
+    if (this.bottom) {
+      rc.line(this.x * this.w, this.y * this.h + this.h, this.x * this.w + this.w, this.y * this.h + this.h, {
+        roughness: 0
+      });
+    }
+    if (this.left) {
+      rc.line(this.x * this.w, this.y * this.h, this.x * this.w, this.y * this.h + this.h, {
+        roughness: 0
+      });
+    }
   }
 
   removeEdge(side) {
     switch (side) {
-        case 1: this.top = false; break;
-        case 2: this.right = false; break;
-        case 3: this.bottom = false; break;
-        case 4: this.left = false; break;
+      case 1:
+        this.top = false;
+        break;
+      case 2:
+        this.right = false;
+        break;
+      case 3:
+        this.bottom = false;
+        break;
+      case 4:
+        this.left = false;
+        break;
     }
   }
 
-  getRandomNeighbor(){//returns a random neighbor cell
+  getRandomNeighbor() { //returns a random neighbor cell
     let neighbors = [];
 
-    let top = cells[index(this.x, this.y-1)];
-    let right = cells[index(this.x+1, this.y)];
-    let bottom = cells[index(this.x, this.y+1)];
-    let left = cells[index(this.x-1, this.y)];
+    let top = cells[index(this.x, this.y - 1)];
+    let right = cells[index(this.x + 1, this.y)];
+    let bottom = cells[index(this.x, this.y + 1)];
+    let left = cells[index(this.x - 1, this.y)];
 
-    if(top!=undefined && top.visited == false && this.y > 0){
+    if (top != undefined && top.visited == false && this.y > 0) {
       neighbors.push(top);
     }
 
-    if(right!=undefined && right.visited == false && this.x < settings.cols-1){
+    if (right != undefined && right.visited == false && this.x < settings.cols - 1) {
       neighbors.push(right);
     }
 
-    if(bottom!=undefined && bottom.visited == false && this.y < settings.rows-1){
+    if (bottom != undefined && bottom.visited == false && this.y < settings.rows - 1) {
       neighbors.push(bottom);
     }
 
-    if(left!=undefined && left.visited == false && this.x > 0){
+    if (left != undefined && left.visited == false && this.x > 0) {
       neighbors.push(left);
     }
 
-    let n = Math.floor(Math.random() * neighbors.length-1) + 1;
+    let n = Math.floor(Math.random() * neighbors.length - 1) + 1;
 
     return neighbors[n];
   }
