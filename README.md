@@ -27,3 +27,20 @@ use for multiplying the x and y values of the cell class by the width of a cell 
 "abcde".includes("cd") // true
 
 "abc".repeat(3) // "abcabcabc"
+
+
+
+
+"no-use-before-define": ["error", { "functions": true, "classes": true }]
+
+
+"class-methods-use-this": [<enabled>, { "exceptMethods": [<...exceptions>] }]
+ 
+ 
+ "skipBlankLines": false (default) disallows trailing whitespace on empty lines
+ 
+"skipBlankLines": true allows trailing whitespace on empty lines
+
+"ignoreComments": false (default) disallows trailing whitespace in comment blocks
+
+"ignoreComments": true allows trailing whitespace in comment blocks
