@@ -1,5 +1,9 @@
 # MazeGenerator
 
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Maze Generator Output")
+
+
+
 http://roughjs.com/
 
 https://coolors.co/app
@@ -23,7 +27,3 @@ use for multiplying the x and y values of the cell class by the width of a cell 
 "abcde".includes("cd") // true
 
 "abc".repeat(3) // "abcabcabc"
-
-
-
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Logo Title Text 1")
