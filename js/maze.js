@@ -72,34 +72,34 @@ class Maze {
       element.display();
     });
     if (this.current != cells[0]) {
-      rc.rectangle(this.current.x * this.current.w, this.current.y * this.current.h, this.current.w, this.current.h, {
+      rc.rectangle(this.current.x * this.current.w + 2, this.current.y * this.current.h + 2, this.current.w - 4, this.current.h - 4, {
         roughness: 0,
-        fill: 'rgba(255, 0, 0, 0.9)',
+        fill: '#93FF96',
         fillStyle: 'solid',
-        strokeWidth: 0.1
+        strokeWidth: 0.01
       });
       if (this.trailOne != null) {
-        rc.rectangle(this.trailOne.x * this.trailOne.w, this.trailOne.y * this.trailOne.h, this.trailOne.w, this.trailOne.h, {
+        rc.rectangle(this.trailOne.x * this.trailOne.w + 6, this.trailOne.y * this.trailOne.h + 6, this.trailOne.w - 12, this.trailOne.h - 12, {
           roughness: 0,
-          fill: 'rgba(255, 0, 30, 0.6)',
+          fill: '#B2FFA8',
           fillStyle: 'solid',
-          strokeWidth: 0.1
+          strokeWidth: 0.01
         });
       }
       if (this.trailTwo != null) {
-        rc.rectangle(this.trailTwo.x * this.trailTwo.w, this.trailTwo.y * this.trailTwo.h, this.trailTwo.w, this.trailTwo.h, {
+        rc.rectangle(this.trailTwo.x * this.trailTwo.w + 8, this.trailTwo.y * this.trailTwo.h + 8, this.trailTwo.w - 16, this.trailTwo.h - 16, {
           roughness: 0,
-          fill: 'rgba(255, 0, 60, 0.3)',
+          fill: '#B2FFA8',
           fillStyle: 'solid',
-          strokeWidth: 0.1
+          strokeWidth: 0.01
         });
       }
       if (this.trailThree != null) {
-        rc.rectangle(this.trailThree.x * this.trailThree.w, this.trailThree.y * this.trailThree.h, this.trailThree.w, this.trailThree.h, {
+        rc.rectangle(this.trailThree.x * this.trailThree.w + 10, this.trailThree.y * this.trailThree.h + 10, this.trailThree.w - 20, this.trailThree.h - 20, {
           roughness: 0,
-          fill: 'rgba(255, 0, 90, 0.2)',
+          fill: '#D0FFB7',
           fillStyle: 'solid',
-          strokeWidth: 0.1
+          strokeWidth: 0.01
         });
       }
       this.trailThree = this.trailTwo;
