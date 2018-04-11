@@ -4,20 +4,20 @@ const context = canvas.getContext('2d');
 
 cells = [];
 
-settings = {
-  cols: 30,
-  rows: 30,
-  width: 500,
-  height: 500
+settings = {//make sure cols/rows evenly divides into width/height (visual bug)
+  cols: 20,
+  rows: 20,
+  width: 800,
+  height: 800
 };
 
 let m = new Maze(settings);
 
-var FPS = 60;
+var FPS = 100000;
 setInterval(function() {
   update();
   draw();
-}, 1000/FPS);
+}, 100000/FPS);
 
 function update() {}
 function draw() {

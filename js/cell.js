@@ -49,11 +49,11 @@ class Cell {
       neighbors.push(top);
     }
 
-    if(right!=undefined && right.visited == false && this.x < settings.cols){
+    if(right!=undefined && right.visited == false && this.x < settings.cols-1){
       neighbors.push(right);
     }
 
-    if(bottom!=undefined && bottom.visited == false && this.y < settings.rows){
+    if(bottom!=undefined && bottom.visited == false && this.y < settings.rows-1){
       neighbors.push(bottom);
     }
 
