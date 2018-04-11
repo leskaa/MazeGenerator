@@ -22,3 +22,16 @@ B2FFA8
 93FF96
 
 86E7B8
+
+
+
+Cool form inputs to manipulate the maze:
+
+
+<form>
+  
+  Select your favorite color:
+  
+  <input type="color" name="favcolor">
+  
+</form>
