@@ -44,3 +44,16 @@ use for multiplying the x and y values of the cell class by the width of a cell 
 "ignoreComments": false (default) disallows trailing whitespace in comment blocks
 
 "ignoreComments": true allows trailing whitespace in comment blocks
+
+
+
+
+F2F5DE
+
+D0FFB7
+
+B2FFA8
+
+93FF96
+
+86E7B8
