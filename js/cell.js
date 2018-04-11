@@ -11,6 +11,7 @@ class Cell {
     this.left = true;
 
     this.visited = false;
+    this.filled = false;
   }
 
   display() {

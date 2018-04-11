@@ -13,11 +13,11 @@ settings = {//make sure cols/rows evenly divides into width/height (visual bug)
 
 let m = new Maze(settings);
 
-var FPS = 100000;
+var FPS = 10;
 setInterval(function() {
   update();
   draw();
-}, 100000/FPS);
+}, 1000/FPS);
 
 function update() {}
 function draw() {

@@ -24,6 +24,7 @@ class Maze {
 
     this.current.visited = true;
     this.next = this.current.getRandomNeighbor();
+    this.current.filled = true;
 
       if (this.next != null) {
 
@@ -54,7 +55,9 @@ class Maze {
         }
 
         this.current = this.next;
+        this.current.filled = false;
         this.current.visited = true;
+       
 
       } else if (this.stack.length > 0) {
         this.current = this.stack.pop();
