@@ -12,7 +12,6 @@ class Maze {
     this.current = cells[0];
     this.trailOne = null;
     this.trailTwo = null;
-    this.trailThree = null;
   }
 
   fillCells() {
@@ -34,25 +33,21 @@ class Maze {
       this.stack.push(this.current);
 
       if (this.next.x > this.current.x) {
-        //next is to the right
         this.current.removeEdge(2);
         this.next.removeEdge(4);
       }
 
       if (this.next.x < this.current.x) {
-        //next is to the left
         this.current.removeEdge(4);
         this.next.removeEdge(2);
       }
 
       if (this.next.y > this.current.y) {
-        //next is on the bottom
         this.current.removeEdge(3);
         this.next.removeEdge(1);
       }
 
       if (this.next.y < this.current.y) {
-        //next is on top of current
         this.current.removeEdge(1);
         this.next.removeEdge(3);
       }
