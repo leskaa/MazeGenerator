@@ -2,6 +2,12 @@ body {
   font-family: "Roboto", helvetica, sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin:0;
@@ -150,8 +156,7 @@ button:hover{
 }
 
 #canvas {
-  display: block;
-  margin:20px 530px 0px;
+  width:100%;
 }
 
 .slider {

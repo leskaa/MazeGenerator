@@ -4,11 +4,11 @@
 <head>
   <style>
     body {
-      background: linear-gradient(170deg, #F2F5DE, #D2E5D8);
+      background: #F2F5DE;
     }
   </style>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Maze Generator</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,7 +36,7 @@
         <input id="js-col" class="textboxes" type="number" placeholder="20">
       </div>
       <div class="input-25">
-        <input id="js-width" class="textboxes" type="number" placeholder="600">
+        <input id="js-width" class="textboxes" type="number" placeholder="600" value=>
       </div>
       <div class="input-25">
         <input id="js-height" class="textboxes" type="number" placeholder="600">
@@ -57,7 +57,7 @@
     </fieldset>
   </form>
 
-  <canvas id="canvas" width="1000" height="1000"></canvas>
+  <canvas id="canvas" width="window.innerWidth" height="window.innerWidth"></canvas>
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src="https://rawgit.com/pshihn/rough/master/dist/rough.min.js"></script>
