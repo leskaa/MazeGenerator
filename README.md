@@ -1,6 +1,6 @@
 # MazeGenerator
 
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Depth-first code")
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/depthfirst.png "Depth-first code")
 
 
 
