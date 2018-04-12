@@ -23,7 +23,7 @@ class Maze {
     }
   }
 
-  depthSearch() {
+  generate() {
 
     this.current.visited = true;
     this.next = this.current.getRandomNeighbor();

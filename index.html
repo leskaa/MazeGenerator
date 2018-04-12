@@ -3,17 +3,64 @@
 
 <head>
   <style>
-  body {
-    background: #F2F5DE
-  }
+    body {
+      background: #F2F5DE
+    }
   </style>
   <meta charset="utf-8">
   <title>Maze Generator</title>
-  <script src="https://rawgit.com/pshihn/rough/master/dist/rough.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <canvas id="canvas" width="1100" height="1100"></canvas>
+  <form id="mazeconfig" onsubmit="handleSubmit(); return false;">
+    <fieldset>
+      <legend>MAZE GENERATOR</legend>
+      <div class="labels-25">
+        <p class="labeltext">Rows</p>
+      </div>
+      <div class="labels-25">
+        <p class="labeltext">Columns</p>
+      </div>
+      <div class="labels-25">
+        <p class="labeltext">Width</p>
+      </div>
+      <div class="labels-25">
+        <p class="labeltext">Height</p>
+      </div>
+      <div class="input-25">
+        <input id="js-row" class="textboxes" type="number" placeholder="6">
+      </div>
+      <div class="input-25">
+        <input id="js-col" class="textboxes" type="number" placeholder="6">
+      </div>
+      <div class="input-25">
+        <input id="js-width" class="textboxes" type="number" placeholder="600">
+      </div>
+      <div class="input-25">
+        <input id="js-height" class="textboxes" type="number" placeholder="600">
+      </div>
+      <div class="labels-50">
+        <p class="labeltext" id="js-genspeed">Generation Speed: 30 fps</p>
+      </div>
+      <div class="labels-50"></div>
+      <div class="input-50">
+        <input id="fpsslider" type="range" min="1" max="60" value="30">
+      </div>
+      <div class="input-50 purple"></div>
+      <div class="labels-50"></div>
+      <div class="labels-50"></div>
+      <div class="input-100">
+        <button id='settings'>Generate</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <canvas id="canvas" width="1000" height="1000"></canvas>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://rawgit.com/pshihn/rough/master/dist/rough.min.js"></script>
+  <script src="js/jQuery.js"></script>
   <script src="js/cell.js"></script>
   <script src="js/maze.js"></script>
   <script src="js/main.js"></script>

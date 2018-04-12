@@ -4,25 +4,40 @@ const context = canvas.getContext('2d');
 
 cells = [];
 
-settings = { //make sure cols/rows evenly divides into width/height (visual bug)
-  cols: 20,
-  rows: 20,
-  width: 600,
-  height: 600
-};
+running = false;
 
-let m = new Maze(settings);
+console.log($('#js-col').val());
 
-var FPS = 20;
-setInterval(function () {
-  update();
-  draw();
-}, 1000 / FPS);
+settings;
+let m;
 
-function update() {}
+function handleSubmit() {
+  settings = {
+    cols: $( '#js-col' ).val(),
+    rows: $( '#js-row' ).val(),
+    width: $( '#js-width' ).val(),
+    height: $( '#js-height' ).val(),
+    fps: $( '#fpsslider' ).val()
+    }
 
-function draw() {
-  context.clearRect(0, 0, settings.width, settings.height);
-  m.display();
-  m.depthSearch();
+    m = new Maze(settings);
+  
+  running = true;
+  console.log(settings);
+  $( '#mazeconfig' ).slideToggle(700);
 }
+
+  setInterval(function () {
+    update();
+    draw();
+  }, 1000 / settings.fps);
+
+  function update() {}
+
+  function draw() {
+    if(running){
+    context.clearRect(0, 0, settings.width, settings.height);
+    m.generate();
+    m.display();
+    }
+  }
