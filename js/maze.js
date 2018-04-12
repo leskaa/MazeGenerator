@@ -78,7 +78,7 @@ class Maze {
         strokeWidth: 0.01
       });
       if (this.trailOne != null) {
-        rc.rectangle(this.trailOne.x * this.trailOne.w + 6, this.trailOne.y * this.trailOne.h + 6, this.trailOne.w - 12, this.trailOne.h - 12, {
+        rc.rectangle(this.trailOne.x * this.trailOne.w + 10, this.trailOne.y * this.trailOne.h + 10, this.trailOne.w - 20, this.trailOne.h - 20, {
           roughness: 0,
           fill: '#B2FFA8',
           fillStyle: 'solid',
@@ -86,7 +86,7 @@ class Maze {
         });
       }
       if (this.trailTwo != null) {
-        rc.rectangle(this.trailTwo.x * this.trailTwo.w + 8, this.trailTwo.y * this.trailTwo.h + 8, this.trailTwo.w - 16, this.trailTwo.h - 16, {
+        rc.rectangle(this.trailTwo.x * this.trailTwo.w + 14, this.trailTwo.y * this.trailTwo.h + 14, this.trailTwo.w - 28, this.trailTwo.h - 28, {
           roughness: 0,
           fill: '#B2FFA8',
           fillStyle: 'solid',
@@ -94,7 +94,7 @@ class Maze {
         });
       }
       if (this.trailThree != null) {
-        rc.rectangle(this.trailThree.x * this.trailThree.w + 10, this.trailThree.y * this.trailThree.h + 10, this.trailThree.w - 20, this.trailThree.h - 20, {
+        rc.rectangle(this.trailThree.x * this.trailThree.w + 18, this.trailThree.y * this.trailThree.h + 18, this.trailThree.w - 36, this.trailThree.h - 36, {
           roughness: 0,
           fill: '#D0FFB7',
           fillStyle: 'solid',
