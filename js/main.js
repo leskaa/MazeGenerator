@@ -6,8 +6,6 @@ cells = [];
 
 running = false;
 
-console.log($('#js-col').val());
-
 settings;
 let m;
 
@@ -23,7 +21,6 @@ function handleSubmit() {
     m = new Maze(settings);
   
   running = true;
-  console.log(settings);
   $( '#mazeconfig' ).slideToggle(700);
 
   setInterval(function () {
