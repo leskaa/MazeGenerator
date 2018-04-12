@@ -19,28 +19,28 @@ class Cell {
       rc.line(this.x * this.w, this.y * this.h, this.x * this.w + this.w, this.y * this.h, {
         roughness: 0,
         stroke: '#86E7B8',
-        strokeWidth: 4
+        strokeWidth: 8
       });
     }
     if (this.right) {
       rc.line(this.x * this.w + this.w, this.y * this.h, this.x * this.w + this.w, this.y * this.h + this.h, {
         roughness: 0,
         stroke: '#86E7B8',
-        strokeWidth: 4
+        strokeWidth: 8
       });
     }
     if (this.bottom) {
       rc.line(this.x * this.w, this.y * this.h + this.h, this.x * this.w + this.w, this.y * this.h + this.h, {
         roughness: 0,
         stroke: '#86E7B8',
-        strokeWidth: 4
+        strokeWidth: 8
       });
     }
     if (this.left) {
       rc.line(this.x * this.w, this.y * this.h, this.x * this.w, this.y * this.h + this.h, {
         roughness: 0,
         stroke: '#86E7B8',
-        strokeWidth: 4
+        strokeWidth: 8
       });
     }
   }
