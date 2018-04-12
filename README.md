@@ -1,6 +1,6 @@
 # MazeGenerator
 
-<img src="https://github.com/dylanro/MazeGenerator/blob/master/depthfirst.png" alt="Code" style="width: 200px;"/>
+<img src="https://github.com/dylanro/MazeGenerator/blob/master/depthfirst.png" alt="Code" style="width: 100px;"/>
 
 
 
