@@ -1,12 +1,10 @@
 # MazeGenerator
 
-<img src="https://github.com/dylanro/MazeGenerator/blob/master/depthfirst.png" alt="Code" style="width: 100px;"/>
-
 
 
 http://roughjs.com/
 
-
+https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
 https://coolors.co/app
 
