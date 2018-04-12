@@ -25,12 +25,12 @@ function handleSubmit() {
   running = true;
   console.log(settings);
   $( '#mazeconfig' ).slideToggle(700);
-}
 
   setInterval(function () {
     update();
     draw();
   }, 1000 / settings.fps);
+}
 
   function update() {}
 

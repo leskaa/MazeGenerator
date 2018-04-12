@@ -4,7 +4,7 @@
 <head>
   <style>
     body {
-      background: #F2F5DE
+      background: linear-gradient(170deg, #F2F5DE, #D2E5D8);
     }
   </style>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
 <body>
   <form id="mazeconfig" onsubmit="handleSubmit(); return false;">
     <fieldset>
-      <legend>MAZE GENERATOR</legend>
+      <legend>MAZE GENERATOR<br><p>Created By<br> Dylan Roberts and Alex Leska</p></legend>
       <div class="labels-25">
         <p class="labeltext">Rows</p>
       </div>
@@ -29,10 +29,10 @@
         <p class="labeltext">Height</p>
       </div>
       <div class="input-25">
-        <input id="js-row" class="textboxes" type="number" placeholder="6">
+        <input id="js-row" class="textboxes" type="number" placeholder="20">
       </div>
       <div class="input-25">
-        <input id="js-col" class="textboxes" type="number" placeholder="6">
+        <input id="js-col" class="textboxes" type="number" placeholder="20">
       </div>
       <div class="input-25">
         <input id="js-width" class="textboxes" type="number" placeholder="600">
@@ -41,11 +41,11 @@
         <input id="js-height" class="textboxes" type="number" placeholder="600">
       </div>
       <div class="labels-50">
-        <p class="labeltext" id="js-genspeed">Generation Speed: 30 fps</p>
+        <p class="labeltext" id="js-genspeed">Generation Speed: 15 fps</p>
       </div>
       <div class="labels-50"></div>
       <div class="input-50">
-        <input id="fpsslider" type="range" min="1" max="60" value="30">
+        <input class="slider" id="fpsslider" type="range" min="1" max="60" value="15">
       </div>
       <div class="input-50 purple"></div>
       <div class="labels-50"></div>
