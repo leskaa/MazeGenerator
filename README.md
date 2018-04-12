@@ -1,6 +1,6 @@
 # MazeGenerator
 
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Maze Generator Output")
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Depth-first code")
 
 
 
@@ -25,13 +25,6 @@ B2FFA8
 
 
 
-Cool form inputs to manipulate the maze:
 
 
-<form>
-  
-  Select your favorite color:
-  
-  <input type="color" name="favcolor">
-  
-</form>
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Maze Generator Output")
