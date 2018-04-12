@@ -33,6 +33,16 @@ html {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .container {
+    width:100%;
+    max-height:540px;
+    max-width:540px;
+    display:block;
+    margin: 40px auto 0px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .container {
     width:100%;
@@ -216,4 +226,9 @@ button:hover{
   border-radius: 50%;
   background: #4CAF50;
   cursor: pointer;
+}
+
+.white-small {
+  color:#FFF;
+  font-size: .7em;
 }
