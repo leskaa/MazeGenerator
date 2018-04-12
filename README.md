@@ -1,6 +1,6 @@
 # MazeGenerator
 
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/depthfirst.png =250x "Depth-first code")
+<img src="https://github.com/dylanro/MazeGenerator/blob/master/depthfirst.png" alt="Code" style="width: 200px;"/>
 
 
 
