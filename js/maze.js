@@ -12,6 +12,10 @@ class Maze {
     this.current = cells[0];
     this.trailOne = null;
     this.trailTwo = null;
+
+    //creating the opening/exit gaps
+    cells[0].removeEdge(1);
+    cells[cells.length-1].removeEdge(3);
   }
 
   fillCells() {
