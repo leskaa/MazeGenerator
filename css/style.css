@@ -20,7 +20,7 @@ html {
   max-height:800px;
   max-width:800px;
   display:block;
-  margin: 40px auto 0px;
+  margin: 40px auto 40px;
 }
 
 * {
@@ -203,4 +203,37 @@ button:hover{
 .white-small {
   color:#FFF;
   font-size: .7em;
+}
+
+.bottom-buttons{
+  background-color:#000;
+  width: 800px;
+  display: block;
+  margin: 0px auto 0px;
+}
+
+.bottom-buttons button {
+  width:100%;
+  height:100%;
+}
+
+.button-holder {
+  width: 50%;
+  height:55px;
+  float: left;
+  display: block;
+}
+
+.button-holder-download {
+  width: 50%;
+  height:55px;
+  float: left;
+  display: block;
+}
+
+.button-holder-download a {
+  width: 100%;
+  display: block;
+  height:100%;
+  text-align: center;
 }
