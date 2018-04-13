@@ -1,12 +1,10 @@
 # MazeGenerator
 
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Maze Generator Output")
-
 
 
 http://roughjs.com/
 
-
+https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
 https://coolors.co/app
 
@@ -25,13 +23,6 @@ B2FFA8
 
 
 
-Cool form inputs to manipulate the maze:
 
 
-<form>
-  
-  Select your favorite color:
-  
-  <input type="color" name="favcolor">
-  
-</form>
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Maze Generator Output")
