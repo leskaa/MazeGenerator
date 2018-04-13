@@ -19,9 +19,10 @@ function handleSubmit() {
     }
 
     m = new Maze(settings);
-  
+    $( '.bottom-buttons button, .button-holder-download a').css('display', 'block');
+
   running = true;
-  $( '#mazeconfig' ).slideToggle(700);
+  $( '#mazeconfig').slideToggle(700);
 
   setInterval(function () {
     update();

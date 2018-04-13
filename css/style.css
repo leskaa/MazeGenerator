@@ -35,7 +35,7 @@ form {
   background-color:#FFF;
   padding:40px;
   border-radius: 7px;
-  display: block;
+  display: none;
   margin: 40px auto;
 }
 
@@ -206,15 +206,17 @@ button:hover{
 }
 
 .bottom-buttons{
-  background-color:#000;
   width: 800px;
   display: block;
   margin: 0px auto 0px;
 }
 
 .bottom-buttons button {
-  width:100%;
+  width:90%;
   height:100%;
+  display: none;
+  border-radius: 6px;
+  background-color: #456990;
 }
 
 .button-holder {
@@ -233,7 +235,31 @@ button:hover{
 
 .button-holder-download a {
   width: 100%;
-  display: block;
+  display: none;
   height:100%;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #456990;
   text-align: center;
+  border-radius: 6px;
+}
+
+.button-holder-download p{
+  padding:20px;
+}
+
+.color-picker-container {
+  font-size:.8em;
+  display:block;
+  height:25px;
+  width:50%;
+  float: left;
+  text-align: center;
+}
+
+#color-picker{
+  width:100%;
+  height: 100%;
+  border: none;
+  background:none;
 }
