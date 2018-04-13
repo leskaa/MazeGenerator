@@ -9,6 +9,8 @@ running = false;
 settings;
 let m;
 
+console.log( width/(width/3));
+
 function handleSubmit() {
   settings = {
     cols: $( '#js-col' ).val(),

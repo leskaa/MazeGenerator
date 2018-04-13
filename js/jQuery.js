@@ -3,7 +3,7 @@ $( '#fpsslider' ).change(function(){
 });
 
 function delayReload(){
-  timeoutID = window.setTimeout(reloadPage, 1000);
+  timeoutID = window.setTimeout(reloadPage, 300);
 }
 
 function reloadPage(){
@@ -39,7 +39,7 @@ if(width > 480){
 }
 
 $( document ).ready(function() {
-  $( 'form' ).fadeToggle();
+  $( 'form' ).fadeToggle(1200);
 });
 
 
