@@ -9,8 +9,6 @@ running = false;
 settings;
 let m;
 
-console.log( width/(width/3));
-
 function handleSubmit() {
   settings = {
     cols: $( '#js-col' ).val(),
@@ -22,8 +20,10 @@ function handleSubmit() {
 
     m = new Maze(settings);
     $( '.bottom-buttons button, .button-holder-download a').css('display', 'block');
-
-  running = true;
+    
+    timeoutID = window.setTimeout(function(){
+      running = true;
+    }, 200);
   $( '#mazeconfig').slideToggle(700);
 
   setInterval(function () {

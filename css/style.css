@@ -21,6 +21,7 @@ html {
   max-width:800px;
   display:block;
   margin: 40px auto 40px;
+  background-color: #F2F5DE;
 }
 
 * {
