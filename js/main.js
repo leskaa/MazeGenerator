@@ -20,9 +20,9 @@ function handleSubmit() {
 
     m = new Maze(settings);
     $( '.bottom-buttons button, .button-holder-download a').css('display', 'block');
-    
+
     timeoutID = window.setTimeout(function(){
-      running = true;
+      running = true; 
     }, 200);
   $( '#mazeconfig').slideToggle(700);
 
