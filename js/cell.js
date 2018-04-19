@@ -16,35 +16,39 @@ class Cell {
 
   display() {
     if (this.top) {
-        rc.line(this.x * this.w, this.y * this.h, this.x * this.w + this.w, this.y * this.h, {
-          roughness: 0,
-          stroke: '#86E7B8',
-          strokeWidth: width/(width/3.3)
-        });
+      line(
+        this.x * this.w,
+        this.y * this.h,
+        this.x * this.w + this.w,
+        this.y * this.h
+      );
     }
 
     if (this.right) {
-        rc.line(this.x * this.w + this.w, this.y * this.h, this.x * this.w + this.w, this.y * this.h + this.h, {
-          roughness: 0,
-          stroke: '#86E7B8',
-          strokeWidth: width/(width/3.3)
-        });
+      line(
+        this.x * this.w + this.w,
+        this.y * this.h,
+        this.x * this.w + this.w,
+        this.y * this.h + this.h
+      );
     }
 
     if (this.bottom) {
-        rc.line(this.x * this.w, this.y * this.h + this.h, this.x * this.w + this.w, this.y * this.h + this.h, {
-          roughness: 0,
-          stroke: '#86E7B8',
-          strokeWidth: width/(width/3.3)
-        });
+      line(
+        this.x * this.w,
+        this.y * this.h + this.h,
+        this.x * this.w + this.w,
+        this.y * this.h + this.h
+      );
     }
 
     if (this.left) {
-        rc.line(this.x * this.w, this.y * this.h, this.x * this.w, this.y * this.h + this.h, {
-          roughness: 0,
-          stroke: '#86E7B8',
-          strokeWidth: width/(width/3.3)
-        });
+      line(
+        this.x * this.w,
+        this.y * this.h,
+        this.x * this.w,
+        this.y * this.h + this.h
+      );
     }
   }
 
@@ -65,7 +69,8 @@ class Cell {
     }
   }
 
-  getRandomNeighbor() { //returns a random neighbor cell
+  getRandomNeighbor() {
+    //returns a random neighbor cell
     let neighbors = [];
 
     let top = cells[index(this.x, this.y - 1)];
@@ -73,19 +78,19 @@ class Cell {
     let bottom = cells[index(this.x, this.y + 1)];
     let left = cells[index(this.x - 1, this.y)];
 
-    if (top != undefined && top.visited == false && this.y > 0) {
+    if (top && !top.visited && this.y > 0) {
       neighbors.push(top);
     }
 
-    if (right != undefined && right.visited == false && this.x < settings.cols - 1) {
+    if (right && !right.visited && this.x < settings.cols - 1) {
       neighbors.push(right);
     }
 
-    if (bottom != undefined && bottom.visited == false && this.y < settings.rows - 1) {
+    if (bottom && !bottom.visited && this.y < settings.rows - 1) {
       neighbors.push(bottom);
     }
 
-    if (left != undefined && left.visited == false && this.x > 0) {
+    if (left && !left.visited && this.x > 0) {
       neighbors.push(left);
     }
 

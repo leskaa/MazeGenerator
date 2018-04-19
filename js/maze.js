@@ -15,7 +15,7 @@ class Maze {
 
     //creating the opening/exit gaps
     cells[0].removeEdge(1);
-    cells[cells.length-1].removeEdge(3);
+    cells[cells.length - 1].removeEdge(3);
   }
 
   fillCells() {
@@ -27,13 +27,11 @@ class Maze {
   }
 
   generate() {
-
     this.current.visited = true;
     this.next = this.current.getRandomNeighbor();
     this.current.filled = true;
 
     if (this.next != null) {
-
       this.stack.push(this.current);
 
       if (this.next.x > this.current.x) {
@@ -59,47 +57,45 @@ class Maze {
       this.current = this.next;
       this.current.filled = false;
       this.current.visited = true;
-
-
     } else if (this.stack.length > 0) {
       this.current = this.stack.pop();
     }
   }
 
   display() {
-    cells.forEach(function (element) {
+    cells.forEach(function(element) {
       element.display();
     });
     if (this.current != cells[0]) {
-      rc.rectangle(this.current.x * this.current.w + 2, this.current.y * this.current.h + 2, this.current.w - 4, this.current.h - 4, {
-        roughness: 0,
-        fill: '#93FF96',
-        fillStyle: 'solid',
-        strokeWidth: 0.01
-      });
+      rect(
+        this.current.x * this.current.w + 2,
+        this.current.y * this.current.h + 2,
+        this.current.w - 4,
+        this.current.h - 4
+      );
       if (this.trailOne != null) {
-        rc.rectangle(this.trailOne.x * this.trailOne.w + 10, this.trailOne.y * this.trailOne.h + 10, this.trailOne.w - 20, this.trailOne.h - 20, {
-          roughness: 0,
-          fill: '#B2FFA8',
-          fillStyle: 'solid',
-          strokeWidth: 0.01
-        });
+        rect(
+          this.trailOne.x * this.trailOne.w + 10,
+          this.trailOne.y * this.trailOne.h + 10,
+          this.trailOne.w - 20,
+          this.trailOne.h - 20
+        );
       }
       if (this.trailTwo != null) {
-        rc.rectangle(this.trailTwo.x * this.trailTwo.w + 14, this.trailTwo.y * this.trailTwo.h + 14, this.trailTwo.w - 28, this.trailTwo.h - 28, {
-          roughness: 0,
-          fill: '#B2FFA8',
-          fillStyle: 'solid',
-          strokeWidth: 0.01
-        });
+        rect(
+          this.trailTwo.x * this.trailTwo.w + 14,
+          this.trailTwo.y * this.trailTwo.h + 14,
+          this.trailTwo.w - 28,
+          this.trailTwo.h - 28
+        );
       }
       if (this.trailThree != null) {
-        rc.rectangle(this.trailThree.x * this.trailThree.w + 18, this.trailThree.y * this.trailThree.h + 18, this.trailThree.w - 36, this.trailThree.h - 36, {
-          roughness: 0,
-          fill: '#D0FFB7',
-          fillStyle: 'solid',
-          strokeWidth: 0.01
-        });
+        rect(
+          this.trailThree.x * this.trailThree.w + 18,
+          this.trailThree.y * this.trailThree.h + 18,
+          this.trailThree.w - 36,
+          this.trailThree.h - 36
+        );
       }
       this.trailThree = this.trailTwo;
       this.trailTwo = this.trailOne;

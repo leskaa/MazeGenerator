@@ -7,69 +7,32 @@
   <title>Maze Generator</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mediaqueries.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
 </head>
 
 <body>
-  <form id="mazeconfig" onsubmit="handleSubmit(); return false;">
-    <fieldset>
-      <legend>MAZE GENERATOR<br><p>Created By<br> Dylan Roberts and Alex Leska</p></legend>
-      <div class="labels-25">
-        <p class="labeltext">Rows</p>
-      </div>
-      <div class="labels-25">
-        <p class="labeltext">Columns</p>
-      </div>
-      <div class="labels-25">
-        <p class="labeltext">Width</p>
-      </div>
-      <div class="labels-25">
-        <p class="labeltext">Height</p>
-      </div>
-      <div class="input-25">
-        <input id="js-row" class="textboxes" type="number" value='20'>
-      </div>
-      <div class="input-25">
-        <input id="js-col" class="textboxes" type="number" value='20'>
-      </div>
-      <div class="input-25">
-        <input id="js-width" class="textboxes" type="number" placeholder="600">
-      </div>
-      <div class="input-25">
-        <input id="js-height" class="textboxes" type="number" placeholder="600">
-      </div>
-      <div class="labels-50">
-        <p class="labeltext" id="js-genspeed">Generation Speed: 15 fps</p>
-      </div>
-      <div class="labels-50"></div>
-      <div class="input-50">
-        <input class="slider" id="fpsslider" type="range" min="1" max="60" value="15">
-      </div>
-      <div class="color-picker-container">
-        <!--<input id="color-picker" type="color">-->
-      </div>
-      <div class="labels-50"></div>
-      <div class="labels-50"></div>
-      <div class="input-100">
-        <button id='settings'>Generate</button>
-      </div>
-    </fieldset>
-  </form>
-
   <div class="container">
-    <canvas id="canvas" width="411" height="411"></canvas>
+    <form id="configWindow" onsubmit="handleSubmit(); return false;">
+      <fieldset>
+        <legend>MAZE GENERATOR</legend>
+        <p>Created by:<br><a href="dylanroberts.me">Dylan Roberts</a> & <a href="">Alex Leska</a></p>
+        <div id="inputs">
+          <div class="w25 input-holder"><label for="size-text-box">Size</label><input id="size-text-box" value="20" class="" type="number"></div>
+          <div class="w25 input-holder"><label for="instant">Instant</label><div id="custom-checkbox"><input id="instant" type="checkbox"></div></div>
+          <div class="w50 input-holder"><label id="slide-label" for="fps-slider">FPS (30)</label><input id="fps-slider" min="1" max="60" value="30" type="range"></div>
+          <div class="w50 input-holder"><label for="background-picker">Background</label><input id="background-picker" value="#F2F5DE" type="color"></div>
+          <div class="w50 input-holder"><label for="maze-color-picker">Maze</label><input id="maze-color-picker" value="#93FF96" type="color"></div>
+          <div class="w100 input-holder"><button id="generate-button">Generate</button></div>
+        </div>
+      </fieldset>
+    </form>
   </div>
 
-  <div class="bottom-buttons">
-    <div class="button-holder">
-    <button id="js-gen">Generate a New Maze</button>
-  </div>
-  <div class="button-holder-download">
-    <a href="#" download="maze.png" id="js-download"><p>Download</p></a>
-  </div>
+  <div class="canvas-holder">
+    <canvas id="canvas" width="800" height="800"></canvas>
   </div>
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src="https://rawgit.com/pshihn/rough/master/dist/rough.min.js"></script>
   <script src="js/jQuery.js"></script>
   <script src="js/cell.js"></script>
   <script src="js/maze.js"></script>

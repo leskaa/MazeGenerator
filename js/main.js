@@ -1,42 +1,31 @@
-//GLOBAL VARIABLES
-const rc = rough.canvas(document.getElementById("canvas"));
-const context = canvas.getContext('2d');
-
+var canvas;
 cells = [];
-
 running = false;
-
-settings;
-let m;
+var settings;
+var m;
 
 function handleSubmit() {
   settings = {
-    cols: $( '#js-col' ).val(),
-    rows: $( '#js-row' ).val(),
-    width: $( '#js-width' ).val(),
-    height: $( '#js-height' ).val(),
-    fps: $( '#fpsslider' ).val()
-    }
-
+    cols: $( '#size-text-box' ).val(),
+    rows: $( '#size-text-box' ).val(),
+    width: windowWidth > 800 ? 800 : windowWidth-30,
+    height: windowWidth > 800 ? 800 : windowWidth-30,
+    fps: $( '#fps-slider' ).val()
+  };
     m = new Maze(settings);
-    $( '.bottom-buttons button, .button-holder-download a').css('display', 'block');
-
-    timeoutID = window.setTimeout(function(){
-      running = true; 
-    }, 200);
-  $( '#mazeconfig').slideToggle(700);
-
-  setInterval(function () {
-    update();
-    draw();
-  }, 1000 / settings.fps);
+    running = true; 
+    $( '.container').slideToggle(700);
 }
 
-  function update() {}
+  function setup(){
+    canvas = createCanvas(windowWidth > 800 ? 800 : windowWidth-30, windowWidth > 800 ? 800 : windowWidth-30);
+  }
+
+  canvas.position(50,50);
 
   function draw() {
     if(running){
-    context.clearRect(0, 0, settings.width, settings.height);
+    background('#FFF');
     m.generate();
     m.display();
     }
