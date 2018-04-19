@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="cell.js"></script>
+    <script src="maze.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="configWindow" onsubmit="handleSubmit(); return false;">
+        <fieldset>
+          <legend>MAZE GENERATOR</legend>
+          <p>Created by:<br><a href="dylanroberts.me">Dylan Roberts</a> & <a href="">Alex Leska</a></p>
+          <div id="inputs">
+            <div class="w25 input-holder"><label for="size-text-box">Size</label><input id="size-text-box" value="20" class="" type="number"></div>
+            <div class="w25 input-holder"><label for="instant">Instant</label><div id="custom-checkbox"><input id="instant" type="checkbox"></div></div>
+            <div class="w50 input-holder"><label id="slide-label" for="fps-slider">FPS (30)</label><input id="fps-slider" min="1" max="60" value="30" type="range"></div>
+            <div class="w50 input-holder"><label for="background-picker">Background</label><input id="background-picker" value="#F2F5DE" type="color"></div>
+            <div class="w50 input-holder"><label for="maze-color-picker">Maze</label><input id="maze-color-picker" value="#000000" type="color"></div>
+            <div class="w100 input-holder"><button id="generate-button">Generate</button></div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Maze Generator</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mediaqueries.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-</head>
+    <div id="sketch-holder"></div>
 
-<body>
-  <div class="container">
-    <form id="configWindow" onsubmit="handleSubmit(); return false;">
-      <fieldset>
-        <legend>MAZE GENERATOR</legend>
-        <p>Created by:<br><a href="dylanroberts.me">Dylan Roberts</a> & <a href="">Alex Leska</a></p>
-        <div id="inputs">
-          <div class="w25 input-holder"><label for="size-text-box">Size</label><input id="size-text-box" value="20" class="" type="number"></div>
-          <div class="w25 input-holder"><label for="instant">Instant</label><div id="custom-checkbox"><input id="instant" type="checkbox"></div></div>
-          <div class="w50 input-holder"><label id="slide-label" for="fps-slider">FPS (30)</label><input id="fps-slider" min="1" max="60" value="30" type="range"></div>
-          <div class="w50 input-holder"><label for="background-picker">Background</label><input id="background-picker" value="#F2F5DE" type="color"></div>
-          <div class="w50 input-holder"><label for="maze-color-picker">Maze</label><input id="maze-color-picker" value="#93FF96" type="color"></div>
-          <div class="w100 input-holder"><button id="generate-button">Generate</button></div>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-
-  <div class="canvas-holder">
-    <canvas id="canvas" width="800" height="800"></canvas>
-  </div>
-
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src="js/jQuery.js"></script>
-  <script src="js/cell.js"></script>
-  <script src="js/maze.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <div class="bottom-buttons">
+        <div class="button-holder">
+        <button id="new-maze">New Maze</button>
+      </div>
+      <div class="button-holder-download">
+        <button id="download-button">Download</button>
+      </div>
+    </div>
+    
+    <script src="sketch.js"></script>
+  </body>
 </html>
