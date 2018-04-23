@@ -21,7 +21,7 @@
 }
   
   #configWindow legend {
-    text-align: center;
+    margin: 0 auto;
     color: #000;
     font-size: 30px;
   }
