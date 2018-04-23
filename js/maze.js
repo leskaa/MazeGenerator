@@ -68,33 +68,33 @@ class Maze {
       });
       if (this.current != cells[0]) {
         rect(
-          this.current.x * this.current.w + 2,
-          this.current.y * this.current.h + 2,
-          this.current.w - 4,
-          this.current.h - 4
+          this.current.x * this.current.w + this.current.w * 0.1,
+          this.current.y * this.current.h + this.current.h * 0.1,
+          this.current.w - this.current.w * 0.2,
+          this.current.h - this.current.h * 0.2
         );
         if (this.trailOne != null) {
           rect(
-            this.trailOne.x * this.trailOne.w + 10,
-            this.trailOne.y * this.trailOne.h + 10,
-            this.trailOne.w - 20,
-            this.trailOne.h - 20
+            this.trailOne.x * this.trailOne.w + this.trailOne.w * 0.2,
+            this.trailOne.y * this.trailOne.h + this.trailOne.h * 0.2,
+            this.trailOne.w - this.trailOne.w * 0.4,
+            this.trailOne.h - this.trailOne.h * 0.4
           );
         }
         if (this.trailTwo != null) {
           rect(
-            this.trailTwo.x * this.trailTwo.w + 14,
-            this.trailTwo.y * this.trailTwo.h + 14,
-            this.trailTwo.w - 28,
-            this.trailTwo.h - 28
+            this.trailTwo.x * this.trailTwo.w + this.trailTwo.w * 0.3,
+            this.trailTwo.y * this.trailTwo.h + this.trailTwo.h * 0.3,
+            this.trailTwo.w - this.trailTwo.w * 0.6,
+            this.trailTwo.h - this.trailTwo.h * 0.6
           );
         }
         if (this.trailThree != null) {
           rect(
-            this.trailThree.x * this.trailThree.w + 18,
-            this.trailThree.y * this.trailThree.h + 18,
-            this.trailThree.w - 36,
-            this.trailThree.h - 36
+            this.trailThree.x * this.trailThree.w + this.trailThree.w * 0.4,
+            this.trailThree.y * this.trailThree.h + this.trailThree.h * 0.4,
+            this.trailThree.w - this.trailThree.w * 0.8,
+            this.trailThree.h - this.trailThree.h * 0.8
           );
         }
         this.trailThree = this.trailTwo;
