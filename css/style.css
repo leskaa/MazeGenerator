@@ -20,7 +20,7 @@
   display:none;
 }
   
-  #configWindow legend {
+  #configWindow h1 {
     margin: 0 auto;
     color: #000;
     font-size: 30px;
