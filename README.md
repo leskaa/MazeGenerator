@@ -25,4 +25,7 @@ B2FFA8
 
 
 
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/maze.png "Maze Generator Output")
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadhome2.png "Ipad")
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadhome2side.png "Ipad")
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadmaze.png "Ipad")
+![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadmazeside.png "Ipad")
