@@ -1,233 +1,228 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #FFFAFA;
-}
-
-.temph1 {
-  text-align: center;
-  padding-top: 200px;
-}
-
-.tempp {
-  text-align: center;
-}
-
-.image {
-  background:#274C77;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative;
-  width: 100%;
-  height: 450px;
-}
-
-.nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-size: 1.06em;
-  letter-spacing: 2px;
-  /*background-color: #000;*/
-}
-
-.nav ul {
-  padding: 20px;
-}
-
-.nav ul li {
-  display: inline-block;
-}
-
-.nav ul li:not(:first-child) {
-  margin-left: 20px;
-}
-
-.nav ul li a {
-  color: #aabacc;
-  text-decoration: none;
-}
-
-.nav ul li a:hover {
-  color: #fff;
-}
-
-.main-text {
-  padding-top: 150px;
-  color: #fff;
-  opacity: 100%;
-  text-align: center;
-}
-
-.main-text-side {
-  color: #fff;
-  text-align: center;
-}
-
-.main-see-more {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  text-align: center;
-}
-
-.material-icons {
-  color: white;
-  font-size: 30px;
-}
-
-#small-white {
-  color: white;
-  font-size: 11px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  border-top-right-radius: 7px;
-  border-top-left-radius: 7px;
-}
-
-#projects {
-  height: 750px;
-}
-
-#about {
-  height: 450px;
-}
-
-#contact {
-  height: 350px;
-}
-
-.project-box {
-  height: 100%;
-  border-radius: 7px;
-  margin-top: 47px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.project-box h4 {
-  text-align: center;
-  padding: 5px;
-}
-
-.date {
-  font-size: 80%;
-  padding: 4px;
-  padding-left: 9px;
-}
-
-.description {
-  text-align: center;
-  padding: 8.7px;
-  font-size: 80%;
-  word-break: break-all;
-  word-spacing: 1.4px;
-  padding-bottom: 15px;
-}
-
-.buttons {
-  text-align: center;
-  font-size: 80%;
-  margin-bottom: 20px;
-}
-
-.green {
-  background-color: #32936f;
-}
-
-.blue {
-  background-color: #3b60e4;
-}
-
-.buttons a {
-  padding: 6px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: white;
-}
-/* Grid measurements:
- *
- *   960px wide including 12 gutters (half gutters on both edges)
- *
- *   60px columns (12)
- *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
- *
- *
- *   For smaller screens, we always want 20px of padding on either side,
- *   so 960 + 20 + 20 => 1000px
- *
- **/
-.row {
-  max-width: 1000px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
-/* Clearfix */
-.row::before,
-.row::after {
-  display: table;
-  content: "";
-}
-
-.row::after {
-  clear: both;
-}
-
-.col-3,
-.col-4,
-.col-6,
-.col-12 {
-  float: left;
-
-  /* Gutters:
-   * Each column is padded by half-a-gutter on each side,
-   *
-   * Half a gutter is 10px, 10/960 (context) = 1.041666%
-   *
-   */
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
-}
-
-/* Mobile defaults */
-.col-3,
-.col-4,
-.col-6,
-.col-12 {
-  width: 100%;
-}
-
-/* Non-mobile, grid */
-@media only screen and (min-width: 640px) {
-  /* 3 columns, 3/12 in % */
-  .col-3 {
-    width: 25%;
+ {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-
-  /* 4 columns */
-  .col-4 {
-    width: 33.33%;
-  }
-
-  /* 6 columns */
-  .col-6 {
-    width: 50%;
-  }
-
-  /* 12 columns */
-  .col-12 {
+  
+  html {
+    overflow-x: hidden;
     width: 100%;
   }
+  
+  body {
+    background: #f2f5de;
+    font-family: "Roboto", sans-serif;
+
+  }
+
+#sketch-holder{
+  width:100%;
+  display:none;
 }
+  
+  #configWindow h1 {
+    margin: 0 auto;
+    color: #000;
+    font-size: 30px;
+  }
+  
+  p {
+    color: #000;
+    text-align: center;
+  }
+  
+  p a {
+    color: #036B4C;
+    text-decoration: none;
+  }
+  
+  .container {
+    margin: 15px;
+  }
+
+  canvas {
+    display:block;
+    margin:0 auto;
+  }
+  
+  #configWindow {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    height: 420px;
+    border-radius: 10px;
+    display: none;
+    margin: 40px auto 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 30px;
+  }
+  
+  #configWindow fieldset {
+    border: none;
+  }
+  
+  #inputs {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .input-holder {
+    padding: 7px;
+    margin-top: 20px;
+  }
+  
+  label {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    display: block;
+    padding:5px;
+  }
+  
+  input {
+    width: 100%;
+    border: none;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  #size-text-box {
+    height: 30px;
+    border-radius: 7px;
+    background: none;
+    border: 2px solid #e8e8e8;
+    text-align: center;
+  }
+  
+  #fps-slider {
+    height: 30px;
+  }
+  
+  #background-picker {
+    border-radius: 7px;
+    background: none;
+    border: 2px solid #e8e8e8;
+  }
+  
+  #maze-color-picker {
+    border-radius: 7px;
+    background: none;
+    border: 2px solid #e8e8e8;
+  }
+  
+  #generate-button {
+    height: 50px;
+    border-radius: 7px;
+    background-color: #6F955A;
+    border: 2px solid #e8e8e8;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    border-radius: 7px;
+    border: 2px solid #e8e8e8;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked:after {
+    content: '\2714';
+    margin-left:30px;
+    font-size:18px;
+    color:#6F955A;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #F0F1EB;
+  }
+
+  .bottom-buttons{
+    width:600px;
+    display: block;
+    margin: 25px auto 0px;
+    padding-left:45px;
+    padding-right:20px;
+  }
+  
+  .bottom-buttons button {
+    background-color: #6F955A;
+    color:#FFF;
+    width:90%;
+    height:100%;
+    display:none;
+    border: none;
+    border-radius: 6px;
+    background-color: var('$("#maze-color-picker").val()');
+  }
+  
+  .button-holder {
+    width: 50%;
+    height:55px;
+    float: left;
+    display: block;
+  }
+  
+  .button-holder-download {
+    width: 50%;
+    height:55px;
+    float: left;
+    display: block;
+  }
+  
+  .button-holder-download p{
+    padding:20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+  
+    .bottom-buttons button {
+      width:100%;
+      height:100%;
+      border-radius: 6px;
+      background-color: #6F955A;
+    }
+  
+    .bottom-buttons{
+      width: 100%;
+      display: inline-block;
+      margin: 25px auto 0px;
+      padding-left:20px;
+      padding-right:20px;
+    }
+  
+    .button-holder {
+      width: 100%;
+      height:55px;
+      display: inline-block;
+      margin-bottom:20px;
+    }
+    
+    .button-holder-download {
+      width: 100%;
+      height:55px;
+      display: inline-block;
+    }
+  }
+  
+  /*Width classes*/
+  .w25 {
+    display: block;
+    float: left;
+    width: 25%;
+  }
+  
+  .w50 {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+  
+  .w100 {
+    display: block;
+    float: left;
+    width: 100%;
+  }
