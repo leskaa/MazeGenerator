@@ -1,44 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <style> body {padding: 0; margin: 0;} </style>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/cell.js"></script>
-    <script src="js/maze.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <form id="configWindow" onsubmit="handleSubmit(); return false;">
-        <fieldset>
-          <h1>MAZE GENERATOR</h1>
-          <p>Created by:<br><a href="dylanroberts.me">Dylan Roberts</a> & <a href="">Alex Leska</a></p>
-          <div id="inputs">
-            <div class="w25 input-holder"><label for="size-text-box">Size</label><input id="size-text-box" value="20" class="" type="number"></div>
-            <div class="w25 input-holder"><label for="instant">Instant</label><div id="custom-checkbox"><input id="instant" type="checkbox"></div></div>
-            <div class="w50 input-holder"><label id="slide-label" for="fps-slider">FPS (30)</label><input id="fps-slider" min="1" max="60" value="30" type="range"></div>
-            <div class="w50 input-holder"><label for="background-picker">Background</label><input id="background-picker" value="#F2F5DE" type="color"></div>
-            <div class="w50 input-holder"><label for="maze-color-picker">Maze</label><input id="maze-color-picker" value="#000000" type="color"></div>
-            <div class="w100 input-holder"><button id="generate-button">Generate</button></div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
+<html lang="en" >
 
-    <div id="sketch-holder"></div>
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Dylan</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 
-    <div class="bottom-buttons">
-        <div class="button-holder">
-        <button id="new-maze">New Maze</button>
-      </div>
-      <div class="button-holder-download">
-        <button id="download-button">Download</button>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="image">
+  <h1 class="main-text">Hello, I'm Dylan Roberts.</h1>
+  <p class="main-text-side">I enojy creating websites, games, and many other software related projects.</p>
+  <div class="main-see-more">
+    <p id="small-white">Find out more</p><i class="material-icons">expand_more</i></div>
+</div>
+
+<div class="nav">
+  <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</div>
+
+<div id="about">
+  <h1 class="temph1">Site Currently In Development</h1>
+  <p class="tempp">Responsive design and other key features are coming soon.</p>
+</div>
+
+<div id="projects">
+  <div class="row">
+    <div class="col-3">
+      <div class="project-box">
+        <img src="https://image.ibb.co/fxpHEH/bluemaze.png" alt="">
+        <h4>Maze Generator</h4>
+        <p class="date">4/25/2018</p>
+        <p class="description">We used a depth first recursive <br> backtracking algorithm to generate custom mazes for a user.</p>
+        <div class="buttons">
+          <a class="green" href="http://dylanroberts.me/MazeGenerator/">Try it</a>
+          <a class="blue" href="mailto:zopzzy2421@yahoo.com">Make a suggestion</a>
+        </div>
       </div>
     </div>
-    
-    <script src="js/sketch.js"></script>
-  </body>
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="project-box">
+        <img src="http://via.placeholder.com/350x200" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact">
+
+</div>
+  
+  
+
+</body>
+
 </html>
