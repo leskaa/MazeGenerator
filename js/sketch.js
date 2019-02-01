@@ -17,6 +17,10 @@ $("#fps-slider").change(function() {
   $("#slide-label").text("FPS (" + $("#fps-slider").val() + ")");
 });
 
+$("#background-picker").change(function() {
+  $("body").css("background-color", $("#background-picker").val());
+});
+
 function handleSubmit() {
   settings.rows = $("#size-text-box").val();
   settings.cols = $("#size-text-box").val();
@@ -50,6 +54,7 @@ function setup() {
 function draw() {
   if (running) {
     background($("#background-picker").val());
+    fill($("#maze-color-picker").val())
     m.display();
     if(settings.instant) {
       m.generate();
