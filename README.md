@@ -1,32 +1,13 @@
 # MazeGenerator
 
+Web-application created as a project for _Data Structures & Algorithms_. The [recursive backtracking](https://en.wikipedia.org/wiki/Maze_generation_algorithm) alogrithm is used to generate the maze.
 
+### Utilized Libraries
 
-http://roughjs.com/
+- Bootstrap (CSS Framework)
+- Jquery (DOM Manipulation)
+- p5.js (Graphics Library)
 
-https://en.wikipedia.org/wiki/Maze_generation_algorithm
+Go ahead and [try it out!](http://alexleska.me/MazeGenerator/)
 
-https://coolors.co/app
-
-
-
-
-F2F5DE
-
-D0FFB7
-
-B2FFA8
-
-93FF96
-
-86E7B8
-
-
-
-
-
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadhome2.png "Ipad")
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadhome2side.png "Ipad")
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadmaze.png "Ipad")
-![alt text](https://github.com/dylanro/MazeGenerator/blob/master/ipadmazeside.png "Ipad")
-
+![Ipad](https://github.com/dylanro/MazeGenerator/blob/master/ipadmaze.png)
