@@ -8,6 +8,6 @@ Web-application created as a project for _Data Structures & Algorithms_. The [re
 - Jquery (DOM Manipulation)
 - p5.js (Graphics Library)
 
-Go ahead and [try it out!](http://alexleska.me/MazeGenerator/)
+Go ahead and [try it out!](https://alexleska.me/MazeGenerator/)
 
 ![Ipad](https://github.com/dylanro/MazeGenerator/blob/master/ipadmaze.png)
